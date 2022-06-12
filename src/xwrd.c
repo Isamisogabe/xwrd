@@ -27,7 +27,7 @@ void show_tab(board* b){
  * ***********************/
 void compare_tab(board* b, board* h){
     printf("ーーーーーーーーーーーーーー\n");
-    printf("現在の解答　　　ヒントの位置\n");
+    printf("現在の答案　　　\n");
     for(int i = 0; i < PNL ; i++) {
         for(int j = 0; j < PNL ; j++) {
             printf("%s", b->p[i][j].moji);

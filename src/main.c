@@ -14,14 +14,14 @@ int main(void) {
     char dat[PNL][UTF_LEN * PNL + 1] = {'\0'};
     char ans_dat[PNL][UTF_LEN * PNL + 1] = {'\0'};
 
-    xwrd_read_ans("dat/init.dat", dat);
-    xwrd_read_ans("dat/seikai.dat", ans_dat);
+    xwrd_read_ans("dat/q2/init.dat", dat);
+    xwrd_read_ans("dat/q2/seikai.dat", ans_dat);
     init_tab(&my_board, dat);
     init_tab(&refer_board, dat);
     init_tab(&ans_board, ans_dat);
 
     // read hint
-    hint_len = xwrd_read("dat/hint.dat", hints);
+    hint_len = xwrd_read("dat/q2/hint.dat", hints);
 
     show_tab(&my_board);
     menu menu;
