@@ -9,7 +9,6 @@
  * show_tab
  * 票の表示
  * ***********************/
-
 void show_tab(board* b){
     printf("ーーーーーー\n");
     printf("\n");
@@ -22,6 +21,10 @@ void show_tab(board* b){
     printf("\n");
     printf("ーーーーーー\n");
 }
+/**************************
+ * compare_tab
+ * 表の比較
+ * ***********************/
 void compare_tab(board* b, board* h){
     printf("ーーーーーーーーーーーーーー\n");
     printf("現在の解答　　　ヒントの位置\n");
@@ -38,6 +41,10 @@ void compare_tab(board* b, board* h){
     printf("\n");
     printf("ーーーーーーーーーーーーーー\n");
 }
+/**************************
+ * compare_tab
+ * 表の初期化
+ * ***********************/
 void init_tab(board* b, char dat[][37]){
 
     for(int i = 0; i < PNL ; i++) {
@@ -49,6 +56,10 @@ void init_tab(board* b, char dat[][37]){
 }
 
 
+/**************************
+ * check_tab
+ * 表の評価
+ * ***********************/
 int check_tab(board* b, board* ans){
     int count = 0;
     for(int i = 0; i < PNL ; i++) {
@@ -60,6 +71,10 @@ int check_tab(board* b, board* ans){
     }
     return count;
 }
+/**************************
+ * allocate_hiragana_to_board
+ * 表にひらがなを割り当て
+ * ***********************/
 void allocate_hiragana_to_board(board* b, char* t_str, int x, int y,int len, vec v){
     if (v == VT){
         for(int i = 0; i < len; i++){

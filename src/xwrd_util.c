@@ -4,6 +4,10 @@
 #include "hiragana.h"
 #include "xwrd.h"
 
+/*************************************************
+ * check_fp
+ * @param fp ファイルポインタ
+ * ***********************************************/
 void check_fp(FILE* fp){
 
     if(fp == NULL){
@@ -74,29 +78,11 @@ int xwrd_read(const char* file_name, hint* h){
     return i;
 }
 
-//int str_to_num(char s_num){
-//    int res = atoi(s_num);
-//    if(res == 0){
-//        printf("Invalid argument %c in str_to_num\n", s_num);
-//    }
-//    return s_num;
-//
-//}
-//void xwrd_read(const char* file_name, char target[HINT_MAX_NUM][FILE_BYTES_LEN]){
-//    FILE* fp;
-//    int cnt = 0;
-//    char ans_array[HINT_MAX_NUM][FILE_BYTES_LEN] = {'\0'};
-//    fp = fopen(file_name, "r");
-//
-//    check_fp(fp);
-//    
-//    fscanf_s(fp, "%d")
-//    //while(fgets(target[cnt++], FILE_BYTES_LEN, fp) != NULL);
-//
-//    printf("%s\n", target[cnt]);
-//    fclose(fp);
-//
-//}
+/*************************************************
+ * xwrd_read_ans
+ * @param file_name ファイル名
+ * @param target[][37] 文字列配列
+ * ***********************************************/
 void xwrd_read_ans(const char* file_name, char target[][37]){
     FILE* fp;
     int cnt = 0;
@@ -107,7 +93,11 @@ void xwrd_read_ans(const char* file_name, char target[][37]){
     fclose(fp);
 }
 
-//
+/*************************************************
+ * input_hint_number
+ * @param num 数値情報、int型ポインタ
+ * @param hint_len ヒント情報長さ
+ * ***********************************************/
 void input_hint_number(int* num, int hint_len){
     char buf[3] = {'\0'};
     while(1){
